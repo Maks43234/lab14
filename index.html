@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>TechShop</h1>
+
+    <button class="cart btn-cart" type="button">
+        Кошик:
+        <span class="cart-counter">0</span>
+    </button>
+</header>
+
+<main>
+    <h2>Наші товари</h2>
+
+    <div class="loader-container" id="loader">
+        <div class="spinner"></div>
+        <p>Завантаження товарів...</p>
+    </div>
+
+    <div class="products-grid"></div>
+
+    <div class="favorites-zone" id="favoritesZone">
+        <h2>Улюблені товари</h2>
+        <p>Перетягніть сюди товари, щоб додати їх в улюблене</p>
+    </div>
+</main>
+
+<div class="modal-overlay hidden" id="cartOverlay">
+    <div class="modal-window">
+        <div class="modal-header">
+            <h2>Ваш Кошик</h2>
+            <button class="close-btn" id="closeCartBtn" type="button">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItemsContainer">
+            <p>Кошик порожній.</p>
+        </div>
+
+        <div class="modal-footer">
+            <h3>Разом: <span id="cartTotalSum">0</span> $</h3>
+
+            <a href="checkout.html" class="btn btn-primary" id="checkoutBtn">
+                Оформити замовлення
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
